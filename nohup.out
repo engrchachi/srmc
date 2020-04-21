@@ -1,0 +1,58 @@
+Connected to server
+Connected!
+Connected to server
+Connected!
+Connected to server
+Connected!
+(node:29154) UnhandledPromiseRejectionWarning: FetchError: invalid json response body at http://54.191.55.210/web/index.php/controller/get_tvi_srmc reason: Unexpected token < in JSON at position 1
+    at /home/ec2-user/node-script/node_modules/node-fetch/lib/index.js:272:32
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async /home/ec2-user/node-script/tli_srmc.js:114:18
+(node:29154) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:29154) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+events.js:187
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1301:14)
+    at listenInCluster (net.js:1349:12)
+    at Server.listen (net.js:1437:7)
+    at Function.listen (/home/ec2-user/node-script/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/ec2-user/node-script/tli_srmc.js:54:5)
+    at Module._compile (internal/modules/cjs/loader.js:971:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1011:10)
+    at Module.load (internal/modules/cjs/loader.js:822:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:730:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1051:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1328:8)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+events.js:187
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/ec2-user/node-script/node_modules/mysql/lib/protocol/Protocol.js:112:13)
+    at Socket.<anonymous> (/home/ec2-user/node-script/node_modules/mysql/lib/Connection.js:94:28)
+    at Socket.<anonymous> (/home/ec2-user/node-script/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:215:7)
+    at endReadableNT (_stream_readable.js:1198:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/ec2-user/node-script/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:210:5)
+    at Protocol._delegateError (/home/ec2-user/node-script/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.end (/home/ec2-user/node-script/node_modules/mysql/lib/protocol/Protocol.js:116:8)
+    at Socket.<anonymous> (/home/ec2-user/node-script/node_modules/mysql/lib/Connection.js:94:28)
+    [... lines matching original stack trace ...]
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+}
