@@ -61,6 +61,9 @@ var con = mysql.createConnection({
   password: "APT@123!",
   database: "nmms"
 });
+app.get('/', (req, res) => {
+  res.json({message: "connected"});
+})
 app.get('/tli_sheet', async(req, res) =>{ 
   const response = await fetch(sheet_url);
   const data = await response.json(); 
