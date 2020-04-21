@@ -4,7 +4,7 @@
   "description": "",
   "main": "tli_srmc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node tli_srmc.js"
   },
   "author": "",
   "license": "ISC",
