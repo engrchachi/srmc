@@ -1,8 +1,9 @@
-const url = 'http://54.191.55.210:3000/tli_sheet'; 
 // const url = 'http://54.191.55.210/web/index.php/controller/get_tli_srmc'; 
+const url = 'http://54.191.55.210:3000/tli_sheet'; 
 const url_tvi = 'http://54.191.55.210/web/index.php/controller/get_tvi_srmc';   
 const sheet_url = 'https://sheets.googleapis.com/v4/spreadsheets/1Cgv9dVdqQYgjfyF39Dkx8BezffCTmXG1kcFMUXwX4mM/values/Pag%201&2!A:C?dateTimeRenderOption=FORMATTED_STRING&majorDimension=ROWS&valueRenderOption=FORMATTED_VALUE&prettyPrint=true&alt=json&key=AIzaSyBXiT2YyBtr9Uu7j1SFA_d7nLNgj2I4QGE';
 const now = new Date();
+var PORT = process.env.PORT || 3000;
 const {GoogleSpreadsheet} = require('google-spreadsheet');
 const {promisify} = require('util');
 const fetch = require("node-fetch");
@@ -51,7 +52,7 @@ var findate = tommorowdate + "  " + getDateString(new Date(tommorow), "v");
 
 
 app.use(bodyParser.json({ type: 'application/*+json' }));
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Connected to server");
 });
 
