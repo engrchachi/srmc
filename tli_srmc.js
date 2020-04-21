@@ -1,5 +1,5 @@
 // const url = 'http://54.191.55.210/web/index.php/controller/get_tli_srmc'; 
-const url = `https://$(HEROKU_APP_NAME).heroku.com/tli_sheet`; 
+const url = `https://$(HEROKU_APP_NAME).herokuapp.com/tli_sheet`; 
 const url_tvi = 'http://54.191.55.210/web/index.php/controller/get_tvi_srmc';   
 const sheet_url = 'https://sheets.googleapis.com/v4/spreadsheets/1Cgv9dVdqQYgjfyF39Dkx8BezffCTmXG1kcFMUXwX4mM/values/Pag%201&2!A:C?dateTimeRenderOption=FORMATTED_STRING&majorDimension=ROWS&valueRenderOption=FORMATTED_VALUE&prettyPrint=true&alt=json&key=AIzaSyBXiT2YyBtr9Uu7j1SFA_d7nLNgj2I4QGE';
 const now = new Date();
@@ -72,6 +72,8 @@ app.get('/tli_sheet', async(req, res) =>{
 })
 
 app.get('/tli_srmc',async(req,res) => {
+    console.log(url);
+    console.log(HEROKU_APP_NAME);
     var tli_srmc_today = 0;
     var tli_srmc_tom = 0; 
     const response = await fetch(url);
