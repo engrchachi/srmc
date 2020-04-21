@@ -1,5 +1,5 @@
 // const url = 'http://54.191.55.210/web/index.php/controller/get_tli_srmc'; 
-const url = 'http://54.191.55.210:3000/tli_sheet'; 
+const url = `https://$(HEROKU_APP_NAME).heroku.com/tli_sheet`; 
 const url_tvi = 'http://54.191.55.210/web/index.php/controller/get_tvi_srmc';   
 const sheet_url = 'https://sheets.googleapis.com/v4/spreadsheets/1Cgv9dVdqQYgjfyF39Dkx8BezffCTmXG1kcFMUXwX4mM/values/Pag%201&2!A:C?dateTimeRenderOption=FORMATTED_STRING&majorDimension=ROWS&valueRenderOption=FORMATTED_VALUE&prettyPrint=true&alt=json&key=AIzaSyBXiT2YyBtr9Uu7j1SFA_d7nLNgj2I4QGE';
 const now = new Date();
